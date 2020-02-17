@@ -3,16 +3,20 @@ import UIKit
 final class RepositoriesListView: UIView {
 
     private let activityIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView(style: .medium)
+        let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.color = .orange
+        activityIndicator.color = .white
         return activityIndicator
     }()
 
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
+        tableView.register(RepositoryTableViewCell.self, forCellReuseIdentifier: "RepositoryTableViewCell")
         return tableView
     }()
 
@@ -43,6 +47,10 @@ final class RepositoriesListView: UIView {
         backgroundColor = .lightGray
     }
 
+    func setTableView(dataSource: UITableViewDataSource) {
+        tableView.dataSource = dataSource
+    }
+
     func showLoadingState() {
         activityIndicator.startAnimating()
         tableView.isHidden = true
@@ -50,5 +58,10 @@ final class RepositoriesListView: UIView {
 
     func stopAnimating() {
         activityIndicator.stopAnimating()
+    }
+
+    func reloadTableView() {
+        tableView.isHidden = false
+        tableView.reloadData()
     }
 }

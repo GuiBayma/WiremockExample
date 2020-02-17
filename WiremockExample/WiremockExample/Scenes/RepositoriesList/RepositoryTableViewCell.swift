@@ -6,17 +6,11 @@ final class RepositoryTableViewCell: UITableViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
+        view.layer.cornerRadius = 8
         return view
     }()
 
-    private let ownerImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 30
-        imageView.clipsToBounds = true
-        return imageView
-    }()
+    private let ownerImageView = LoadableImageView()
 
     private let repositoryNameLabel: UILabel = {
         let label = UILabel()
@@ -78,12 +72,19 @@ final class RepositoryTableViewCell: UITableViewCell {
             ownerNameLabel.trailingAnchor.constraint(equalTo: repositoryNameLabel.trailingAnchor),
 
             descriptionLabel.leadingAnchor.constraint(equalTo: repositoryNameLabel.leadingAnchor),
-            descriptionLabel.topAnchor.constraint(equalToSystemSpacingBelow: ownerNameLabel.bottomAnchor, multiplier: margin),
+            descriptionLabel.topAnchor.constraint(equalTo: ownerNameLabel.bottomAnchor, constant: margin),
             descriptionLabel.trailingAnchor.constraint(equalTo: repositoryNameLabel.trailingAnchor),
             descriptionLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -margin)
         ])
 
+        selectionStyle = .none
         backgroundColor = .clear
-        layer.cornerRadius = 4
+    }
+
+    func show(model: Repository) {
+        ownerImageView.setImage(from: model.owner.avatarUrl)
+        repositoryNameLabel.text = model.name
+        ownerNameLabel.text = model.owner.login
+        descriptionLabel.text = model.description
     }
 }

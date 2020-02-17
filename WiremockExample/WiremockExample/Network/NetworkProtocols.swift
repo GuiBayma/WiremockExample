@@ -6,13 +6,15 @@ protocol NetworkProtocol {
 
 extension NetworkProtocol {
     func request<T: Decodable>(responseType: T.Type, _ service: NetworkServiceProtocol, completion: ((Result<T, ApiError>) -> Void)?) {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
 
         self.request(service) { result in
             switch result {
             case .failure(let error):
                 completion?(.failure(error))
             case .success(let data):
-                guard let object = try? JSONDecoder().decode(T.self, from: data) else {
+                guard let object = try? decoder.decode(T.self, from: data) else {
                     completion?(.failure(ApiError(error: .unableToDecode)))
                     return
                 }
