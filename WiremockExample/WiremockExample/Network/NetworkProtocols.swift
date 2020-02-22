@@ -36,6 +36,9 @@ protocol NetworkServiceProtocol {
 
 extension NetworkServiceProtocol {
     var baseUrl: String {
-        return "https://api.github.com"
+        guard let baseUrl = Bundle.main.infoDictionary?["BASE_URL"] as? String else {
+            fatalError("Could not resolve BASE_URL")
+        }
+        return baseUrl
     }
 }
