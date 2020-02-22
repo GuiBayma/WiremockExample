@@ -21,9 +21,16 @@ final class Network: NetworkProtocol {
     }
 
     private func configureUrlRequest(with service: NetworkServiceProtocol) -> URLRequest? {
-        guard let url = URL(string: service.path) else {
+
+        var urlComponents = URLComponents(string: service.path)
+        if let queryItems = service.queryItems {
+            urlComponents?.queryItems = queryItems
+        }
+
+        guard let url = urlComponents?.url else {
             return nil
         }
+
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = service.method.rawValue
         return urlRequest

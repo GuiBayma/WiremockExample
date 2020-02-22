@@ -31,4 +31,11 @@ enum HttpMethod: String {
 protocol NetworkServiceProtocol {
     var path: String { get }
     var method: HttpMethod { get }
+    var queryItems: [URLQueryItem]? { get }
+}
+
+extension NetworkServiceProtocol {
+    var baseUrl: String {
+        return "https://api.github.com"
+    }
 }

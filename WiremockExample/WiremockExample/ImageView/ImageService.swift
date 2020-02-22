@@ -6,4 +6,8 @@ struct ImageService: NetworkServiceProtocol {
     var method: HttpMethod {
         return .get
     }
+
+    var queryItems: [URLQueryItem]? {
+        return nil
+    }
 }
