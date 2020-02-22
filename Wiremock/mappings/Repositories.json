@@ -1,0 +1,15 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPathPattern": "/search/repositories",
+        "queryParameters": {
+            "q": { "matches": "language:swift" },
+            "sort": { "matches": "stars" },
+            "page": { "matches": "0" }
+        }
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "repositories.json"
+    }
+}
