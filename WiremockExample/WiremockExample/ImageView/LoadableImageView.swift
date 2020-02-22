@@ -49,6 +49,8 @@ final class LoadableImageView: UIImageView {
     private func handleResult(_ result: Result<Data, ApiError>) {
         if case let Result.success(data) = result {
             image = UIImage(data: data)
+        } else {
+            image = Images.octocat
         }
     }
 }

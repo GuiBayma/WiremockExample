@@ -36,7 +36,8 @@ protocol NetworkServiceProtocol {
 
 extension NetworkServiceProtocol {
     var baseUrl: String {
-        guard let baseUrl = Bundle.main.infoDictionary?["BASE_URL"] as? String else {
+        let bundle = Assets.getBundle()
+        guard let baseUrl = bundle.infoDictionary?["BASE_URL"] as? String else {
             fatalError("Could not resolve BASE_URL")
         }
         return baseUrl
