@@ -36,7 +36,7 @@ done
 if [ "$START" == true ]
 then
     echo "Starting Wiremock on port $PORT from $WIREMOCK_DIR"
-    if ! [ -f "Wiremock/wiremock-standalone-$VERSION.jar" ];
+    if ! [ -f "$WIREMOCK_DIR/wiremock-standalone-$VERSION.jar" ];
     then
         curl https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-standalone/$VERSION/wiremock-standalone-$VERSION.jar --output $WIREMOCK_DIR/wiremock-standalone-$VERSION.jar
     fi
