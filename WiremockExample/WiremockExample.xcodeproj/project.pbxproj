@@ -20,11 +20,22 @@
 		17630A6F240195DE0071C60E /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17630A6E240195DE0071C60E /* Assets.swift */; };
 		17630A72240196710071C60E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17630A71240196710071C60E /* Images.xcassets */; };
 		17630A74240196980071C60E /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17630A73240196980071C60E /* Images.swift */; };
+		17630A7C24019BE40071C60E /* WiremockExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17630A7B24019BE40071C60E /* WiremockExampleUITests.swift */; };
 		1799494923F9BD4F0003F784 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1799494823F9BD4F0003F784 /* AppDelegate.swift */; };
 		1799494B23F9BD4F0003F784 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1799494A23F9BD4F0003F784 /* SceneDelegate.swift */; };
 		1799495223F9BD520003F784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1799495123F9BD520003F784 /* Assets.xcassets */; };
 		1799495523F9BD520003F784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1799495323F9BD520003F784 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17630A7E24019BE40071C60E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1799493D23F9BD4F0003F784 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1799494423F9BD4F0003F784;
+			remoteInfo = WiremockExample;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1726FB7323F9D0980095DD07 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -40,6 +51,9 @@
 		17630A6E240195DE0071C60E /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		17630A71240196710071C60E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17630A73240196980071C60E /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		17630A7924019BE40071C60E /* WiremockExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiremockExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17630A7B24019BE40071C60E /* WiremockExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiremockExampleUITests.swift; sourceTree = "<group>"; };
+		17630A7D24019BE40071C60E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1799494523F9BD4F0003F784 /* WiremockExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiremockExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1799494823F9BD4F0003F784 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1799494A23F9BD4F0003F784 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +63,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		17630A7624019BE40071C60E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1799494223F9BD4F0003F784 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,10 +147,20 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		17630A7A24019BE40071C60E /* WiremockExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17630A7B24019BE40071C60E /* WiremockExampleUITests.swift */,
+				17630A7D24019BE40071C60E /* Info.plist */,
+			);
+			path = WiremockExampleUITests;
+			sourceTree = "<group>";
+		};
 		1799493C23F9BD4F0003F784 = {
 			isa = PBXGroup;
 			children = (
 				1799494723F9BD4F0003F784 /* WiremockExample */,
+				17630A7A24019BE40071C60E /* WiremockExampleUITests */,
 				1799494623F9BD4F0003F784 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				1799494523F9BD4F0003F784 /* WiremockExample.app */,
+				17630A7924019BE40071C60E /* WiremockExampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +191,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		17630A7824019BE40071C60E /* WiremockExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17630A8024019BE40071C60E /* Build configuration list for PBXNativeTarget "WiremockExampleUITests" */;
+			buildPhases = (
+				17630A7524019BE40071C60E /* Sources */,
+				17630A7624019BE40071C60E /* Frameworks */,
+				17630A7724019BE40071C60E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17630A7F24019BE40071C60E /* PBXTargetDependency */,
+			);
+			name = WiremockExampleUITests;
+			productName = WiremockExampleUITests;
+			productReference = 17630A7924019BE40071C60E /* WiremockExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		1799494423F9BD4F0003F784 /* WiremockExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1799495923F9BD520003F784 /* Build configuration list for PBXNativeTarget "WiremockExample" */;
@@ -186,6 +236,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Guilherme Bayma";
 				TargetAttributes = {
+					17630A7824019BE40071C60E = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 1799494423F9BD4F0003F784;
+					};
 					1799494423F9BD4F0003F784 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -205,11 +259,19 @@
 			projectRoot = "";
 			targets = (
 				1799494423F9BD4F0003F784 /* WiremockExample */,
+				17630A7824019BE40071C60E /* WiremockExampleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		17630A7724019BE40071C60E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1799494323F9BD4F0003F784 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +285,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		17630A7524019BE40071C60E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17630A7C24019BE40071C60E /* WiremockExampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1799494123F9BD4F0003F784 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,6 +316,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		17630A7F24019BE40071C60E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1799494423F9BD4F0003F784 /* WiremockExample */;
+			targetProxy = 17630A7E24019BE40071C60E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		1799495323F9BD520003F784 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -258,7 +336,43 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1726FB9B2401870A0095DD07 /* Mock */ = {
+		17630A8124019BE40071C60E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WiremockExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.WiremockExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WiremockExample;
+			};
+			name = Debug;
+		};
+		17630A8324019BE40071C60E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WiremockExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.WiremockExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WiremockExample;
+			};
+			name = Release;
+		};
+		17630A892401E48F0071C60E /* Test */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -316,15 +430,15 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Mock;
+			name = Test;
 		};
-		1726FB9C2401870A0095DD07 /* Mock */ = {
+		17630A8A2401E48F0071C60E /* Test */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BASE_URL = "http://localhost:336";
 				CODE_SIGN_STYLE = Automatic;
-				DISPLAY_NAME = WiremockMock;
+				DISPLAY_NAME = WiremockTest;
 				INFOPLIST_FILE = "$(SRCROOT)/WiremockExample/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -335,7 +449,25 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Mock;
+			name = Test;
+		};
+		17630A8B2401E48F0071C60E /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WiremockExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bayma.WiremockExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WiremockExample;
+			};
+			name = Test;
 		};
 		1799495723F9BD520003F784 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -492,11 +624,21 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		17630A8024019BE40071C60E /* Build configuration list for PBXNativeTarget "WiremockExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17630A8124019BE40071C60E /* Debug */,
+				17630A8B2401E48F0071C60E /* Test */,
+				17630A8324019BE40071C60E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1799494023F9BD4F0003F784 /* Build configuration list for PBXProject "WiremockExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1799495723F9BD520003F784 /* Debug */,
-				1726FB9B2401870A0095DD07 /* Mock */,
+				17630A892401E48F0071C60E /* Test */,
 				1799495823F9BD520003F784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -506,7 +648,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1799495A23F9BD520003F784 /* Debug */,
-				1726FB9C2401870A0095DD07 /* Mock */,
+				17630A8A2401E48F0071C60E /* Test */,
 				1799495B23F9BD520003F784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
